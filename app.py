@@ -8,7 +8,7 @@ from PIL import Image
 from streamlit_webrtc import webrtc_streamer, VideoProcessorBase
 import av
 import queue
-from streamlit_autorefresh import st_autorefresh
+# autorefresh removed
 
 
 # ---------------- PAGE CONFIG ----------------
@@ -19,7 +19,7 @@ st.set_page_config(
 )
 
 # Auto refresh UI every 1 second so queue is drained regularly
-st_autorefresh(interval=1000, key="ui-refresh")
+import time as _time; _time.sleep(0); st.rerun() if False else None
 
 # ---------------- CUSTOM CSS ----------------
 st.markdown("""
