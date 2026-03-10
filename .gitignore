@@ -1,0 +1,8 @@
+data/
+runs/
+.venv/
+*.avi
+*.mp4
+*.pt
+*.jpg
+*.png
