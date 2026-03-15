@@ -18,8 +18,8 @@ st.set_page_config(
     page_icon="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡</text></svg>"
 )
 
-# Auto refresh UI every 1 second so queue is drained regularly
-import time as _time; _time.sleep(0); st.rerun() if False else None
+# Auto-refresh every 1 second using JS (replaces streamlit-autorefresh)
+st.markdown('<meta http-equiv="refresh" content="1">', unsafe_allow_html=True)
 
 # ---------------- CUSTOM CSS ----------------
 st.markdown("""
@@ -734,7 +734,7 @@ with tab3:
                 <div style="margin-top:0.75rem; padding-top:0.75rem;
                             border-top:1px solid var(--border);">
                     <span style="color:var(--warning);">⚠</span>
-                    &nbsp;Violations: {violations}
+                    &nbsp;Violations: {violations}-
                 </div>
             </div>
         </div>
